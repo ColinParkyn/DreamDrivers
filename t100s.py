@@ -1,9 +1,3 @@
-# This is a demo class that shows how we can utilize RVisa inside a class wrapper.
-
-# This example class can be used to modify existing classes that our users come in with
-#
-# It abstracts ResourceManager from the user
-
 import rvisa as visa
 import matplotlib.pyplot as plt
 import numpy as np
@@ -85,7 +79,7 @@ class t100s(object):
     def setwav(self,wav): 
         self.instr.write(f'L={wav}')
 
-    def getwav(self,wave):
+    def getwav(self):
         return(self.instr.query('L?'))
 
     #end=MIN or end=MAX
